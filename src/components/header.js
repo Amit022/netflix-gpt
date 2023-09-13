@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Logo, SUPPORTED_LANGUAGES } from "../utils/Constant";
 import { toggleGptSearch } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
+import { FiLogOut ,FiSearch } from "react-icons/fi";
 
 const Header = () => {
     const navigate=useNavigate();
@@ -57,8 +58,8 @@ const Header = () => {
         {
           user &&
           <>
-        <button className="py-2 px-4 m-2 bg-purple-800 rounded-lg text-white" onClick={handleGptSearchBtn}>{showGptSearch ? "Homepage" :"GPT Search"}</button>
-       <button onClick={handleSignOut} className="text-white bg-red-800 px-4 py-2 m-2 rounded-lg">Sign Out</button>
+        <button className="py-2 px-4 m-2 bg-purple-800 rounded-lg text-white" onClick={handleGptSearchBtn}>{showGptSearch ? "Browse" :"GPT Search"} <FiSearch className="inline"/></button>
+       <button onClick={handleSignOut} className="text-white bg-red-800 px-4 py-2 m-2 rounded-lg" >Sign Out <FiLogOut className="inline" /></button>
        </> }
       </div>
     </div>

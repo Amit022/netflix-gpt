@@ -9,5 +9,5 @@ export const API_OPTIONS = {
 
 export const Logo = "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 export const IMG_CDN_URL ="https://image.tmdb.org/t/p/w300"
-export const OPENAI_KEY= "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"
+export const OPENAI_KEY="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"
 export const SUPPORTED_LANGUAGES= [{identifier: "en" , name:"English"},{identifier: "hindi" , name:"Hindi"},{identifier: "spanish" , name:"Spanish"}]

@@ -79,7 +79,7 @@ const Login = () => {
       </div>
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="absolute w-full md:w-1/2 lg:w-3/12 p-12 bg-black my-32 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
+        className="absolute w-full md:w-1/2 lg:w-3/12 p-12 bg-gray-900 my-32 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-80"
       >
         <h1 className=" text-xl md:text-3xl py-0 md:py-3 px-2 font-bold">
           {isSignInForm ? "Sign in" : "Sign Up"}
@@ -97,7 +97,7 @@ const Login = () => {
           type="text"
           ref={email}
           placeholder="Email or phone number"
-          className="py-3 px-2 m-2 w-full bg-gray-700"
+          className="py-3 px-2 m-2 w-full bg-gray-700 border-none focus:border border-blue-700"
         />
         <input
           type="password"

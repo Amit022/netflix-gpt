@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import openai from "../utils/openAi";
 import { API_OPTIONS } from "../utils/Constant";
 import { addSearchGptMovies } from "../utils/gptSlice";
+import { FiSearch } from "react-icons/fi";
 
 const GptSearchBar = () => {
   const langKey = useSelector((store) => store.config.lang);
@@ -14,7 +15,7 @@ const GptSearchBar = () => {
 
   const searchMovieTmdb = async (movie) => {
     const data = await fetch(
-      "https://api.themoviedb.org/3/search/movie?query=" +
+      "https://corsproxy.io/?https://api.themoviedb.org/3/search/movie?query=" +
         movie +
         "&include_adult=false&language=en-US&page=1",
       API_OPTIONS
@@ -60,7 +61,7 @@ const GptSearchBar = () => {
           className=" px-2 md:px-4 py-2 my-4 mx-1 text-white rounded-lg bg-red-800 col-span-3"
           onClick={handleGptSearch}
         >
-          {Lang[langKey].search}
+          {Lang[langKey].search}  <FiSearch className="inline"/>
         </button>
       </form>
     </div>
